@@ -54,8 +54,12 @@ function Contact() {
 
   return (
     <>
-      <PageHero eyebrow="Contact" title="Let's create your dream smile." subtitle="Book an appointment, ask a question, or simply say hello — we'd love to meet you." />
-      <section className="pb-20 pt-8 lg:pb-24 lg:pt-12">
+      <section className="relative overflow-hidden bg-gradient-to-b from-brand-soft to-white py-10 text-center">
+        <span className="eyebrow justify-center">Contact</span>
+        <h1 className="mt-3 font-display text-4xl leading-tight text-foreground sm:text-5xl">Let's create your dream smile.</h1>
+        <p className="mx-auto mt-3 max-w-2xl text-base text-muted-foreground">Book an appointment, ask a question, or simply say hello — we'd love to meet you.</p>
+      </section>
+      <section className="pb-16 pt-6 lg:pb-20 lg:pt-8">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[1.1fr_1fr]">
           <div className="rounded-3xl border border-border bg-white p-8 shadow-soft sm:p-10">
             <h2 className="font-display text-3xl">Book your appointment</h2>
