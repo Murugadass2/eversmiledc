@@ -56,8 +56,13 @@ const doctors = [
   {
     img: doctor1,
     name: "Dr. M. Wasimharoon",
-    role: "Oral & Maxillofacial Surgeon
-           Fellowship in Maxillofacial trauma",
+     role: (
+      <>
+        Oral & Maxillofacial Surgeon
+        <br />
+        Fellowship in Maxillofacial Trauma
+      </>
+    ),
     exp: "BDS, MDS, FMFT",
     bio: "Specialized expertise in dental implants, facial trauma management, wisdom tooth removal and a wide range of oral and maxillofacial surgical procedures. Committed to advanced, evidence-based surgical care tailored to each patient.",
     phone: "8668062943",
