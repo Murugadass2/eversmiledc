@@ -190,13 +190,13 @@ function Index() {
           </div>
           <Reveal direction="right" delay={100}>
             <div className="relative">
-              <div className="relative overflow-hidden rounded-[2rem] shadow-lift h-[560px] bg-brand-soft/30">
+              <div className="relative overflow-hidden rounded-[2rem] shadow-lift bg-brand-soft/30" style={{ aspectRatio: "4/3", minHeight: "280px" }}>
                 {heroSlides.map((slide, index) => (
-                  <img 
+                  <img
                     key={slide}
-                    src={slide} 
-                    alt={`Dental clinic preview ${index + 1}`} 
-                    className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100 relative' : 'opacity-0'}`} 
+                    src={slide}
+                    alt={`Dental clinic preview ${index + 1}`}
+                    className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${index === currentSlide ? "opacity-100" : "opacity-0"}`}
                   />
                 ))}
               </div>
