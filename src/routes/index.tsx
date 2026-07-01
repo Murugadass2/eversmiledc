@@ -133,7 +133,7 @@ function AppointmentForm() {
         <textarea name="message" rows={3} placeholder="Tell us a bit about your concern…" className="mt-2 w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-foreground outline-none transition focus:border-brand focus:ring-1 focus:ring-brand resize-none" />
       </div>
       <button disabled={status === "sending"} className="sm:col-span-2 btn-primary inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-sm font-semibold transition hover:scale-[1.02] disabled:opacity-60">
-        <Send className="h-4 w-4" /> {status === "sending" ? "Sending…" : "Request Appointment"}
+        <Send className="h-4 w-4" /> {status === "sending" ? "Sending…" : "Make an Appointment"}
       </button>
       {status === "success" && <p className="sm:col-span-2 text-sm font-medium text-green-600">✓ Thank you! We'll confirm within 30 minutes.</p>}
       {status === "error" && <p className="sm:col-span-2 text-sm font-medium text-red-600">Something went wrong. Please call +91 86680 62943.</p>}
@@ -376,7 +376,7 @@ function Index() {
             {/* Form card */}
             <Reveal direction="right" delay={100}>
               <div className="rounded-3xl border border-border bg-white shadow-soft p-8 sm:p-10">
-                <h3 className="font-display text-2xl text-foreground">Request an Appointment</h3>
+                <h3 className="font-display text-2xl text-foreground">Make an Appointment</h3>
                 <p className="mt-1 text-sm text-muted-foreground">We confirm within 30 minutes.</p>
                 <div className="mt-6">
                   <AppointmentForm />

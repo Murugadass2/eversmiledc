@@ -1,4 +1,4 @@
-import { Phone, CalendarDays } from "lucide-react";
+import { Phone, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -15,9 +15,9 @@ export function FloatingButtons() {
       <div className="fixed bottom-6 left-1/2 z-40 -translate-x-1/2">
         <Link
           to="/contact"
-          className="btn-primary inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold shadow-lift transition hover:scale-105"
+          className="btn-primary inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold shadow-lift transition hover:scale-105 whitespace-nowrap"
         >
-          <CalendarDays className="h-4 w-4" /> Book Appointment
+          Book Appointment <ArrowRight className="h-4 w-4" />
         </Link>
       </div>
 
