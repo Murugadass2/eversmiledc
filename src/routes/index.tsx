@@ -57,7 +57,7 @@ const doctors = [
   },
   {
     img: doctor2,
-    name: "Dr. H. Fahmeedha Ishrath",
+    name: "Dr. W. Fahmeedha Ishrath",
     role: "Public Health Dentist",
     exp: "BDS, MDS",
     bio: "Dedicated to delivering evidence-based and patient-centered dental care. Believes that prevention and patient education are the foundations of lifelong oral health — helping individuals achieve healthy, confident smiles.",
