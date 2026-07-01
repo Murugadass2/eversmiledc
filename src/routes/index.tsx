@@ -171,7 +171,7 @@ function Index() {
             </Reveal>
             <Reveal delay={160}>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-                Expert Preventive Dentistry,dental implants, cosmetic dentistry and complete oral healthcare solutions — delivered in a calm, luxury clinical environment.
+                Expert Preventive Dentistry, dental implants, cosmetic dentistry and complete oral healthcare solutions — delivered in a calm, luxury clinical environment.
               </p>
             </Reveal>
             <Reveal delay={220}>
