@@ -159,7 +159,8 @@ function Index() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-brand-soft via-white to-white" />
         <div className="absolute -right-40 top-20 h-[500px] w-[500px] rounded-full bg-brand/10 blur-3xl" />
-        <div className="relative mx-auto grid max-w-7xl gap-8 px-6 pt-6 pb-16 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:pt-10 lg:pb-24 lg:gap-12 pl-6 pr-8 sm:px-8">
+        <div className="relative mx-auto max-w-7xl px-5 sm:px-8 pt-6 pb-16 lg:pt-10 lg:pb-24">
+          <div className="grid gap-8 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-12">
           <div>
             <Reveal>
               <span className="eyebrow text-base"><span className="h-1.5 w-1.5 rounded-full bg-brand" /> Premium Dental Care</span>
@@ -185,11 +186,11 @@ function Index() {
               </div>
             </Reveal>
             <Reveal delay={300}>
-              <div className="mt-10 grid grid-cols-3 gap-2 border-t border-border pt-8">
+              <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-2 border-t border-border pt-8">
                 {[["Advanced Tech", "Digital scans & CBCT"], ["Fellowship-Trained", "Expert surgical team"], ["Pain-Free Care", "Gentle protocols"]].map(([t, l]) => (
                   <div key={t}>
-                    <div className="font-display text-sm sm:text-base lg:text-lg text-brand-deep leading-tight">{t}</div>
-                    <div className="mt-1 text-[9px] sm:text-xs uppercase tracking-wider text-muted-foreground">{l}</div>
+                    <div className="font-display text-base sm:text-base lg:text-lg text-brand-deep leading-tight">{t}</div>
+                    <div className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">{l}</div>
                   </div>
                 ))}
               </div>
@@ -218,6 +219,7 @@ function Index() {
               </div>
             </div>
           </Reveal>
+          </div>
         </div>
       </section>
 
