@@ -1,4 +1,5 @@
-import { Phone } from "lucide-react";
+import { Phone, CalendarDays } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -10,25 +11,36 @@ function WhatsAppIcon({ className }: { className?: string }) {
 
 export function FloatingButtons() {
   return (
-    <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
-      {/* WhatsApp */}
-      <a
-        href="https://wa.me/918668062943"
-        aria-label="WhatsApp"
-        title="Chat on WhatsApp"
-        className="grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-white shadow-lift transition hover:scale-110"
-      >
-        <WhatsAppIcon className="h-[2.15rem] w-[2.15rem]" />
-      </a>
-      {/* Call */}
-      <a
-        href="tel:+918668062943"
-        aria-label="Call Now"
-        title="Call Now"
-        className="grid h-14 w-14 place-items-center rounded-full bg-white border-2 border-brand text-brand shadow-lift transition hover:scale-110 hover:bg-brand hover:text-white"
-      >
-        <Phone className="h-6 w-6" />
-      </a>
-    </div>
+    <>
+      <div className="fixed bottom-6 left-1/2 z-40 -translate-x-1/2">
+        <Link
+          to="/contact"
+          className="btn-primary inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold shadow-lift transition hover:scale-105"
+        >
+          <CalendarDays className="h-4 w-4" /> Book Appointment
+        </Link>
+      </div>
+
+      <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+        {/* WhatsApp */}
+        <a
+          href="https://wa.me/918668062943"
+          aria-label="WhatsApp"
+          title="Chat on WhatsApp"
+          className="grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-white shadow-lift transition hover:scale-110"
+        >
+          <WhatsAppIcon className="h-[2.15rem] w-[2.15rem]" />
+        </a>
+        {/* Call */}
+        <a
+          href="tel:+918668062943"
+          aria-label="Call Now"
+          title="Call Now"
+          className="grid h-14 w-14 place-items-center rounded-full bg-white border-2 border-brand text-brand shadow-lift transition hover:scale-110 hover:bg-brand hover:text-white"
+        >
+          <Phone className="h-6 w-6" />
+        </a>
+      </div>
+    </>
   );
 }

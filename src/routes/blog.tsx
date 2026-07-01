@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
+import { Reveal } from "@/components/site/Reveal";
 import { Search, ArrowRight } from "lucide-react";
 import smile from "@/assets/smile-1.jpg";
 import clinic from "@/assets/clinic-interior.jpg";
@@ -49,23 +50,25 @@ function Blog() {
           </div>
 
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {posts.map((p) => {
+            {posts.map((p, idx) => {
               const slug = p.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
               return (
-              <Link to="/article/$slug" params={{ slug }} key={p.title} className="group cursor-pointer">
-                <article>
-                  <div className="aspect-[4/3] overflow-hidden rounded-3xl">
-                    <img src={p.img} alt={p.title} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
-                  </div>
-                  <div className="mt-5">
-                    <div className="flex items-center gap-3 text-xs uppercase tracking-wider text-muted-foreground">
-                      <span className="text-brand">{p.cat}</span> <span>·</span> <span>{p.date}</span>
+              <Reveal key={p.title} delay={idx * 80}>
+                <Link to="/article/$slug" params={{ slug }} className="group block cursor-pointer">
+                  <article>
+                    <div className="aspect-[4/3] overflow-hidden rounded-3xl">
+                      <img src={p.img} alt={p.title} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
                     </div>
-                    <h3 className="mt-2 font-display text-2xl leading-tight group-hover:text-brand">{p.title}</h3>
-                    <div className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand">Read article <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" /></div>
-                  </div>
-                </article>
-              </Link>
+                    <div className="mt-5">
+                      <div className="flex items-center gap-3 text-xs uppercase tracking-wider text-muted-foreground">
+                        <span className="text-brand">{p.cat}</span> <span>·</span> <span>{p.date}</span>
+                      </div>
+                      <h3 className="mt-2 font-display text-2xl leading-tight group-hover:text-brand">{p.title}</h3>
+                      <div className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand">Read article <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" /></div>
+                    </div>
+                  </article>
+                </Link>
+              </Reveal>
             )})}
           </div>
         </div>

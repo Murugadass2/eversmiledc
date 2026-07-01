@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
+import { Reveal } from "@/components/site/Reveal";
 import {
   Sparkles, Activity, Microscope, Smile, Crown, Leaf, Baby, UserRound,
   Accessibility, Scissors, ShieldAlert, ArrowRight,
@@ -52,26 +53,28 @@ function Specialities() {
       <section className="section">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {specialities.map((s) => (
-              <article key={s.title} className="group overflow-hidden rounded-3xl border border-border bg-white transition hover:-translate-y-1 hover:border-brand/40 hover:shadow-lift">
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img src={s.image} alt={s.title} loading="lazy" width={1024} height={768} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
-                  <div className="absolute left-4 top-4 grid h-12 w-12 place-items-center rounded-2xl bg-white/95 text-brand shadow-soft backdrop-blur">
-                    <s.icon className="h-6 w-6" />
+            {specialities.map((s, i) => (
+              <Reveal key={s.title} delay={i * 60}>
+                <article className="group h-full overflow-hidden rounded-3xl border border-border bg-white transition hover:-translate-y-1 hover:border-brand/40 hover:shadow-lift">
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <img src={s.image} alt={s.title} loading="lazy" width={1024} height={768} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+                    <div className="absolute left-4 top-4 grid h-12 w-12 place-items-center rounded-2xl bg-white/95 text-brand shadow-soft backdrop-blur">
+                      <s.icon className="h-6 w-6" />
+                    </div>
                   </div>
-                </div>
-                <div className="p-7">
-                <h2 className="font-display text-2xl">{s.title}</h2>
-                <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                  {s.items.map((i) => (
-                    <li key={i} className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-brand" /> {i}</li>
-                  ))}
-                </ul>
-                <Link to="/contact" className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-brand transition group-hover:gap-2">
-                  Book consultation <ArrowRight className="h-4 w-4" />
-                </Link>
-                </div>
-              </article>
+                  <div className="p-7">
+                    <h2 className="font-display text-2xl">{s.title}</h2>
+                    <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+                      {s.items.map((i) => (
+                        <li key={i} className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-brand" /> {i}</li>
+                      ))}
+                    </ul>
+                    <Link to="/contact" className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-brand transition group-hover:gap-2">
+                      Book consultation <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </div>
+                </article>
+              </Reveal>
             ))}
           </div>
         </div>

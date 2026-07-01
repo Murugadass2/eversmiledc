@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Reveal } from "@/components/site/Reveal";
 import { PageHero } from "@/components/site/PageHero";
 import { Phone, Mail, Clock, MessageCircle, Send, MapPin } from "lucide-react";
 import { useState } from "react";
@@ -61,7 +62,8 @@ function Contact() {
       </section>
       <section className="pb-16 pt-6 lg:pb-20 lg:pt-8">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[1.1fr_1fr]">
-          <div className="rounded-3xl border border-border bg-white p-8 shadow-soft sm:p-10">
+          <Reveal direction="left">
+            <div className="rounded-3xl border border-border bg-white p-8 shadow-soft sm:p-10">
             <h2 className="font-display text-3xl">Book your appointment</h2>
             <p className="mt-2 text-sm text-muted-foreground">We'll confirm via call or WhatsApp within 30 minutes.</p>
             <form className="mt-8 grid gap-4 sm:grid-cols-2" onSubmit={onSubmit}>
@@ -88,9 +90,11 @@ function Contact() {
                 <p className="sm:col-span-2 text-sm font-medium text-red-600">Something went wrong. Please call us at +91 86680 62943.</p>
               )}
             </form>
-          </div>
+            </div>
+          </Reveal>
 
-          <div className="space-y-4">
+          <Reveal direction="right" delay={120}>
+            <div className="space-y-4">
             {[
               { icon: MapPin, title: "Visit", text: "No.14D, Basin Road, Thiruvottiyur, Chennai - 600019" },
               { icon: Phone, title: "Call", text: "+91 86680 62943" },
@@ -106,7 +110,8 @@ function Contact() {
                 </div>
               </div>
             ))}
-          </div>
+            </div>
+          </Reveal>
         </div>
         <div className="mx-auto mt-12 max-w-7xl px-6">
           <div className="overflow-hidden rounded-3xl border border-border shadow-soft">

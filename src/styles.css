@@ -210,3 +210,49 @@
 @utility animate-float {
   animation: float-soft 6s ease-in-out infinite;
 }
+
+/* ── Premium scroll-reveal ─────────────────────────────── */
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes reveal-left {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes reveal-right {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes reveal-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Glassmorphism card ────────────────────────────────── */
+@utility glass-card {
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.45);
+  box-shadow: 0 8px 32px rgba(13,110,253,0.10);
+}
+
+/* ── Gradient text ─────────────────────────────────────── */
+@utility gradient-text {
+  background: linear-gradient(135deg, var(--brand), var(--brand-deep));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Premium section divider ───────────────────────────── */
+@utility section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--brand-soft), transparent);
+}
+
+/* ── Smooth scrolling ──────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
