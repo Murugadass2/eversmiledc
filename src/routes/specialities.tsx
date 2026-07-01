@@ -3,7 +3,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import {
   Sparkles, Activity, Microscope, Smile, Crown, Leaf, Baby, UserRound,
-  Accessibility, Scissors, ShieldAlert, ArrowRight,
+  Accessibility, Scissors, ShieldAlert, ArrowRight, ShieldCheck,
 } from "lucide-react";
 import imgImplants from "@/assets/spec-implants.jpg";
 import imgOrtho from "@/assets/spec-ortho.jpg";
@@ -33,6 +33,7 @@ export const Route = createFileRoute("/specialities")({
 });
 
 const specialities = [
+  { icon: ShieldCheck, image: imgBiomim, title: "Preventive Dentistry", items: ["Routine Check-ups","Professional Cleaning","Fluoride Therapy","Dental Sealants","Oral Hygiene Education","Early Cavity Detection"] },
   { icon: Sparkles, image: imgImplants, title: "Dental Implants", items: ["Single Tooth Implant","Multiple Implants","Full Mouth Rehabilitation","Immediate Loading","Implant Dentures"] },
   { icon: Activity, image: imgOrtho, title: "Orthodontics", items: ["Metal Braces","Ceramic Braces","Self-Ligating","Clear Aligners","Invisalign-Style"] },
   { icon: Microscope, image: imgEndo, title: "Endodontics", items: ["Root Canal","Re-Root Canal","Microscope Endodontics","Apicoectomy"] },

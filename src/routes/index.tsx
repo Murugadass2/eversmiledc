@@ -13,7 +13,7 @@ import { Reveal } from "@/components/site/Reveal";
 import {
   ArrowRight, Award, Shield, Smile, Sparkles, Stethoscope, HeartHandshake,
   Microscope, Baby, Crown, Activity, Scissors, Accessibility, UserRound,
-  Phone, CheckCircle2, Clock, Send, CalendarDays,
+  Phone, CheckCircle2, Clock, Send, CalendarDays, ShieldCheck,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -32,6 +32,7 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
+  { icon: ShieldCheck, title: "Preventive Dentistry", desc: "Routine check-ups, professional cleaning, fluoride therapy and sealants to keep your smile healthy." },
   { icon: Sparkles, title: "Dental Implants", desc: "Single, multiple & full-mouth implant solutions with immediate loading options." },
   { icon: Smile, title: "Cosmetic Dentistry", desc: "Smile makeovers, veneers, whitening and contouring tailored to you." },
   { icon: Activity, title: "Orthodontics", desc: "Clear aligners, ceramic braces and Invisalign-style treatments." },
@@ -152,7 +153,7 @@ function Index() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-brand-soft via-white to-white" />
         <div className="absolute -right-40 top-20 h-[500px] w-[500px] rounded-full bg-brand/10 blur-3xl" />
-        <div className="relative mx-auto grid max-w-7xl gap-8 px-5 sm:px-6 pt-6 pb-16 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:pt-10 lg:pb-24 lg:gap-12">
+        <div className="relative mx-auto grid max-w-7xl gap-8 px-6 pt-6 pb-16 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:pt-10 lg:pb-24 lg:gap-12 pl-6 pr-8 sm:px-8">
           <div>
             <Reveal>
               <span className="eyebrow text-base"><span className="h-1.5 w-1.5 rounded-full bg-brand" /> Premium Dental Care</span>
@@ -190,7 +191,7 @@ function Index() {
           </div>
           <Reveal direction="right" delay={100}>
             <div className="relative">
-              <div className="relative overflow-hidden rounded-[2rem] shadow-lift bg-brand-soft/30 mx-1 sm:mx-0" style={{ aspectRatio: "4/3", minHeight: "260px" }}>
+              <div className="relative overflow-hidden rounded-[2rem] shadow-lift bg-brand-soft/30 mx-0 sm:mx-0" style={{ aspectRatio: "4/3", minHeight: "260px" }}>
                 {heroSlides.map((slide, index) => (
                   <img
                     key={slide}
