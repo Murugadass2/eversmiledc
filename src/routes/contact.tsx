@@ -65,7 +65,7 @@ function Contact() {
               <input type="hidden" name="subject" value="New Appointment Request — Ever Smile" />
               <input type="hidden" name="from_name" value="Ever Smile Website" />
               <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
-              <Field label="Full Name" name="name" placeholder="Wasimharoon" />
+              <Field label="Full Name" name="name" placeholder="Your Name" />
               <Field label="Phone" name="phone" placeholder="+91 …" />
               <Field label="Your Email" name="email" type="email" placeholder="you@email.com" className="sm:col-span-2" />
               <Field label="Preferred Date" name="preferred_date" placeholder="" type="date" required={false} />
