@@ -4,6 +4,8 @@ import heroImg from "@/assets/hero-clinic.jpg";
 import clinicInterior from "@/assets/clinic-interior.jpg";
 import specCosmetic from "@/assets/spec-cosmetic.jpg";
 import specImplants from "@/assets/spec-implants.jpg";
+import specMaxfac from "@/assets/spec-maxfac.jpg";
+import specOrtho from "@/assets/spec-ortho.jpg";
 import doctor1 from "@/assets/doctor-1.jpg";
 import doctor2 from "@/assets/doctor-2.jpg";
 import smile from "@/assets/smile-1.jpg";
@@ -107,11 +109,17 @@ function AppointmentForm() {
       </div>
       <div>
         <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Preferred Date</label>
-        <input name="preferred_date" type="date" className="mt-2 w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-foreground outline-none transition focus:border-brand focus:ring-1 focus:ring-brand" />
+        <div className="relative mt-2">
+          <CalendarDays className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground pointer-events-none" />
+          <input name="preferred_date" type="date" min={new Date().toISOString().split("T")[0]} className="w-full rounded-xl border border-border bg-white pl-10 pr-4 py-3 text-sm text-foreground outline-none transition focus:border-brand focus:ring-1 focus:ring-brand min-h-[46px]" />
+        </div>
       </div>
       <div>
         <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Preferred Time</label>
-        <input name="preferred_time" type="time" className="mt-2 w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-foreground outline-none transition focus:border-brand focus:ring-1 focus:ring-brand" />
+        <div className="relative mt-2">
+          <Clock className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground pointer-events-none" />
+          <input name="preferred_time" type="time" className="w-full rounded-xl border border-border bg-white pl-10 pr-4 py-3 text-sm text-foreground outline-none transition focus:border-brand focus:ring-1 focus:ring-brand min-h-[46px]" />
+        </div>
       </div>
       <div className="sm:col-span-2">
         <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Treatment of Interest</label>
@@ -135,7 +143,7 @@ function AppointmentForm() {
 
 function Index() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const heroSlides = [heroImg, clinicInterior, specCosmetic, specImplants, smile];
+  const heroSlides = [heroImg, clinicInterior, specCosmetic, specImplants, specMaxfac, specOrtho];
 
   useEffect(() => {
     const timer = setInterval(() => {
