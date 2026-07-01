@@ -239,7 +239,7 @@ function Index() {
             <a href="tel:+918668062943" className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-brand-deep transition hover:scale-105">
               <Phone className="h-4 w-4" /> Call Emergency Line
             </a>
-            <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border-2 border-white px-8 py-4 text-sm font-semibold text-white transition hover:scale-105 hover:bg-white hover:text-brand-deep">
+            <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-brand-deep transition hover:scale-105">
               <ArrowRight className="h-4 w-4" /> Book Appointment
             </Link>
           </div>
