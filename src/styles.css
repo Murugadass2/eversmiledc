@@ -192,8 +192,16 @@
 }
 
 @utility section {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  @media (min-width: 640px) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  @media (min-width: 1024px) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
 }
 
 @utility eyebrow {

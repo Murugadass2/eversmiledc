@@ -152,7 +152,7 @@ function Index() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-brand-soft via-white to-white" />
         <div className="absolute -right-40 top-20 h-[500px] w-[500px] rounded-full bg-brand/10 blur-3xl" />
-        <div className="relative mx-auto grid max-w-7xl gap-12 px-6 pt-6 pb-20 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:pt-10 lg:pb-24">
+        <div className="relative mx-auto grid max-w-7xl gap-8 px-5 sm:px-6 pt-6 pb-16 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:pt-10 lg:pb-24 lg:gap-12">
           <div>
             <Reveal>
               <span className="eyebrow text-base"><span className="h-1.5 w-1.5 rounded-full bg-brand" /> Premium Dental Care</span>
@@ -190,7 +190,7 @@ function Index() {
           </div>
           <Reveal direction="right" delay={100}>
             <div className="relative">
-              <div className="relative overflow-hidden rounded-[2rem] shadow-lift bg-brand-soft/30" style={{ aspectRatio: "4/3", minHeight: "280px" }}>
+              <div className="relative overflow-hidden rounded-[2rem] shadow-lift bg-brand-soft/30 mx-1 sm:mx-0" style={{ aspectRatio: "4/3", minHeight: "260px" }}>
                 {heroSlides.map((slide, index) => (
                   <img
                     key={slide}
