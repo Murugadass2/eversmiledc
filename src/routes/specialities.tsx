@@ -16,6 +16,7 @@ import imgGeriatric from "@/assets/spec-geriatric.jpg";
 import imgInclusive from "@/assets/spec-inclusive.jpg";
 import imgMaxfac from "@/assets/spec-maxfac.jpg";
 import imgTrauma from "@/assets/spec-trauma.jpg";
+import imgPreve from "@/assets/spec-Preventive-Dentistry.jpg";
 
 export const Route = createFileRoute("/specialities")({
   head: () => ({
@@ -33,18 +34,18 @@ export const Route = createFileRoute("/specialities")({
 });
 
 const specialities = [
-  { icon: ShieldCheck, image: imgBiomim, title: "Preventive Dentistry", items: ["Routine Check-ups","Professional Cleaning","Fluoride Therapy","Dental Sealants","Oral Hygiene Education","Early Cavity Detection"] },
-  { icon: Sparkles, image: imgImplants, title: "Dental Implants", items: ["Single Tooth Implant","Multiple Implants","Full Mouth Rehabilitation","Immediate Loading","Implant Dentures"] },
-  { icon: Activity, image: imgOrtho, title: "Orthodontics", items: ["Metal Braces","Ceramic Braces","Self-Ligating","Clear Aligners","Invisalign-Style"] },
-  { icon: Microscope, image: imgEndo, title: "Endodontics", items: ["Root Canal","Re-Root Canal","Microscope Endodontics","Apicoectomy"] },
-  { icon: Smile, image: imgCosmetic, title: "Cosmetic Dentistry", items: ["Smile Makeover","Teeth Whitening","Veneers","Dental Bonding","Gum Contouring"] },
-  { icon: Crown, image: imgProstho, title: "Prosthodontics", items: ["Crowns","Bridges","Dentures","Full Mouth Rehab"] },
-  { icon: Leaf, image: imgBiomim, title: "Biomimetic Dentistry", items: ["Conservative Restorations","Tooth Preservation","Advanced Bonding"] },
-  { icon: Baby, image: imgPedo, title: "Pediatric Dentistry", items: ["Child Dental Care","Fluoride Treatments","Sealants","Habit Correction","Preventive Care"] },
-  { icon: UserRound, image: imgGeriatric, title: "Geriatric Dentistry", items: ["Senior Dental Care","Denture Solutions","Implant Rehab","Oral Maintenance"] },
-  { icon: Accessibility, image: imgInclusive, title: "Differently-Abled Care", items: ["Specialized Care","Accessible Facilities","Compassionate Treatment"] },
-  { icon: Scissors, image: imgMaxfac, title: "Maxillofacial Surgery", items: ["Wisdom Tooth Removal","Jaw Surgery","Oral Pathology","Facial Reconstruction"] },
-  { icon: ShieldAlert, image: imgTrauma, title: "Panfacial Trauma", items: ["Trauma Management","Facial Fractures","Emergency Surgical Care","Rehabilitation"] },
+  { icon: ShieldCheck, image: imgPreve, title: "Preventive Dentistry", items: ["Routine Check-ups", "Professional Cleaning", "Fluoride Therapy", "Dental Sealants", "Oral Hygiene Education", "Early Cavity Detection"] },
+  { icon: Sparkles, image: imgImplants, title: "Dental Implants", items: ["Single Tooth Implant", "Multiple Implants", "Full Mouth Rehabilitation", "Immediate Loading", "Implant Dentures"] },
+  { icon: Activity, image: imgOrtho, title: "Orthodontics", items: ["Metal Braces", "Ceramic Braces", "Self-Ligating", "Clear Aligners", "Invisalign-Style"] },
+  { icon: Microscope, image: imgEndo, title: "Endodontics", items: ["Root Canal", "Re-Root Canal", "Microscope Endodontics", "Apicoectomy"] },
+  { icon: Smile, image: imgCosmetic, title: "Cosmetic Dentistry", items: ["Smile Makeover", "Teeth Whitening", "Veneers", "Dental Bonding", "Gum Contouring"] },
+  { icon: Crown, image: imgProstho, title: "Prosthodontics", items: ["Crowns", "Bridges", "Dentures", "Full Mouth Rehab"] },
+  { icon: Leaf, image: imgBiomim, title: "Biomimetic Dentistry", items: ["Conservative Restorations", "Tooth Preservation", "Advanced Bonding"] },
+  { icon: Baby, image: imgPedo, title: "Pediatric Dentistry", items: ["Child Dental Care", "Fluoride Treatments", "Sealants", "Habit Correction", "Preventive Care"] },
+  { icon: UserRound, image: imgGeriatric, title: "Geriatric Dentistry", items: ["Senior Dental Care", "Denture Solutions", "Implant Rehab", "Oral Maintenance"] },
+  { icon: Accessibility, image: imgInclusive, title: "Differently-Abled Care", items: ["Specialized Care", "Accessible Facilities", "Compassionate Treatment"] },
+  { icon: Scissors, image: imgMaxfac, title: "Maxillofacial Surgery", items: ["Wisdom Tooth Removal", "Jaw Surgery", "Oral Pathology", "Facial Reconstruction"] },
+  { icon: ShieldAlert, image: imgTrauma, title: "Panfacial Trauma", items: ["Trauma Management", "Facial Fractures", "Emergency Surgical Care", "Rehabilitation"] },
 ];
 
 function Specialities() {
