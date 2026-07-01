@@ -158,7 +158,7 @@ function Index() {
               <span className="eyebrow text-base"><span className="h-1.5 w-1.5 rounded-full bg-brand" /> Premium Dental Care</span>
             </Reveal>
             <Reveal delay={80}>
-              <h1 className="mt-5 font-display text-5xl leading-[1.02] text-foreground sm:text-6xl lg:text-7xl">
+              <h1 className="mt-5 font-display text-4xl leading-[1.05] text-foreground sm:text-5xl lg:text-7xl">
                 Creating beautiful smiles with <em className="italic text-brand">advanced dental care.</em>
               </h1>
             </Reveal>
@@ -178,11 +178,11 @@ function Index() {
               </div>
             </Reveal>
             <Reveal delay={300}>
-              <div className="mt-10 grid grid-cols-3 gap-4 border-t border-border pt-8">
+              <div className="mt-10 grid grid-cols-3 gap-2 border-t border-border pt-8">
                 {[["Advanced Tech", "Digital scans & CBCT"], ["Fellowship-Trained", "Expert surgical team"], ["Pain-Free Care", "Gentle protocols"]].map(([t, l]) => (
                   <div key={t}>
-                    <div className="font-display text-base sm:text-lg text-brand-deep leading-tight">{t}</div>
-                    <div className="mt-1 text-[10px] sm:text-xs uppercase tracking-wider text-muted-foreground">{l}</div>
+                    <div className="font-display text-sm sm:text-base lg:text-lg text-brand-deep leading-tight">{t}</div>
+                    <div className="mt-1 text-[9px] sm:text-xs uppercase tracking-wider text-muted-foreground">{l}</div>
                   </div>
                 ))}
               </div>
