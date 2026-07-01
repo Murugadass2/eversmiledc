@@ -45,7 +45,7 @@ const services = [
 
 const whyUs = [
   { icon: Award, title: "Experienced Specialists", desc: "A multidisciplinary team with 5+ years of combined expertise." },
-  { icon: Microscope, title: "Advanced Technology", desc: "Digital scanners, CBCT imaging and microscope-assisted precision." },
+  { icon: Microscope, title: "Advanced Technology", desc: "Digital scanners." },
   { icon: HeartHandshake, title: "Pain-Free Treatments", desc: "Modern anaesthesia and gentle protocols for total comfort." },
   { icon: UserRound, title: "Personalized Care", desc: "Treatment plans built around your goals, lifestyle and budget." },
   { icon: Shield, title: "Sterile Environment", desc: "Hospital-grade sterilization and infection-control standards." },
@@ -56,15 +56,21 @@ const doctors = [
   {
     img: doctor1,
     name: "Dr. M. Wasimharoon",
-    role: "Oral & Maxillofacial Surgeon",
-    exp: "M.BDS, MDS, FMFT",
+    role: (
+      <>
+        Oral & Maxillofacial Surgeon
+        <br />
+        Fellowship in Maxillofacial Trauma
+      </>
+    ),
+    exp: "BDS, MDS, FMFT",
     bio: "Specialized expertise in dental implants, facial trauma management, wisdom tooth removal and a wide range of oral and maxillofacial surgical procedures. Committed to advanced, evidence-based surgical care tailored to each patient.",
     phone: "8668062943",
-    email: "Wasimdoctor798@gmail.com",
+    email: "wasimdoctor798@gmail.com",
   },
   {
     img: doctor2,
-    name: "Dr. W. Fahmeedha Ishrath",
+    name: "Dr. H. Fahmeedha Ishrath",
     role: "Public Health Dentist",
     exp: "BDS, MDS",
     bio: "Dedicated to delivering evidence-based and patient-centered dental care. Believes that prevention and patient education are the foundations of lifelong oral health — helping individuals achieve healthy, confident smiles.",
@@ -165,7 +171,7 @@ function Index() {
             </Reveal>
             <Reveal delay={160}>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-                Expert dental implants, cosmetic dentistry and complete oral healthcare solutions — delivered in a calm, luxury clinical environment.
+                Expert Preventive Dentistry,dental implants, cosmetic dentistry and complete oral healthcare solutions — delivered in a calm, luxury clinical environment.
               </p>
             </Reveal>
             <Reveal delay={220}>
@@ -340,8 +346,8 @@ function Index() {
                 </p>
                 <div className="mt-8 space-y-4">
                   {[
-                    { icon: Clock,       text: "Mon – Sat · 9 AM – 8 PM" },
-                    { icon: Phone,       text: "+91 86680 62943", href: "tel:+918668062943" },
+                    { icon: Clock, text: "Mon – Sat · 9 AM – 9 PM \n Sun · 9 AM – 1.30 PM" },
+                    { icon: Phone, text: "+91 86680 62943", href: "tel:+918668062943" },
                     { icon: CheckCircle2, text: "24 / 7 Emergency Available" },
                   ].map(({ icon: Icon, text, href }) => (
                     <div key={text} className="flex items-center gap-3 text-foreground/80 text-sm font-medium">
@@ -352,7 +358,7 @@ function Index() {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="mt-8 overflow-hidden rounded-2xl border border-border shadow-soft h-32 max-w-sm w-full">
                   <iframe
                     title="Ever Smile Implant Centre — Location"
