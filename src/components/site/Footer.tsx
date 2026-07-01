@@ -38,8 +38,8 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-foreground">Quick Links</h4>
             <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
-              {[["/about","About Us"],["/specialities","Specialities"],["/gallery","Gallery"],["/blog","Blog"],["/contact","Contact"]].map(([to,label]) => (
-                <li key={to}><Link to={to} className="hover:text-brand">{label}</Link></li>
+              {([["/", "Home"], ["/about", "About Us"], ["/specialities", "Specialities"], ["/gallery", "Gallery"], ["/blog", "Blog"], ["/contact", "Contact"]] as [string, string][]).map(([to, label]) => (
+                <li key={to}><Link to={to} className="transition hover:text-brand">{label}</Link></li>
               ))}
             </ul>
           </div>
@@ -47,8 +47,8 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-foreground">Specialities</h4>
             <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
-              {["Dental Implants","Orthodontics","Cosmetic Dentistry","Endodontics","Maxillofacial Surgery"].map((s) => (
-                <li key={s}><Link to="/specialities" className="hover:text-brand">{s}</Link></li>
+              {["Dental Implants", "Orthodontics", "Cosmetic Dentistry", "Endodontics", "Maxillofacial Surgery", "Pediatric Dentistry"].map((s) => (
+                <li key={s}><Link to="/specialities" className="transition hover:text-brand">{s}</Link></li>
               ))}
             </ul>
           </div>
@@ -56,10 +56,24 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-foreground">Reach Us</h4>
             <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
-              <li className="flex gap-3"><MapPin className="h-4 w-4 shrink-0 text-brand" /> No.14D, Basin Road, Thiruvottiyur, Chennai - 600019</li>
-              <li className="flex gap-3"><Phone className="h-4 w-4 shrink-0 text-brand" /> +91 86680 62943</li>
-              <li className="flex gap-3"><Mail className="h-4 w-4 shrink-0 text-brand" /> eversmiledc@gmail.com</li>
-              <li className="flex gap-3"><Clock className="h-4 w-4 shrink-0 text-brand" /> Mon–Sat · 9:00 – 20:00</li>
+              <li className="flex gap-3">
+                <MapPin className="h-4 w-4 shrink-0 text-brand mt-0.5" />
+                <a href="https://www.google.com/maps?q=No.14D,Basin+Road,Thiruvottiyur,Chennai+600019" target="_blank" rel="noopener noreferrer" className="transition hover:text-brand">
+                  No.14D, Basin Road, Thiruvottiyur, Chennai - 600019
+                </a>
+              </li>
+              <li className="flex gap-3">
+                <Phone className="h-4 w-4 shrink-0 text-brand mt-0.5" />
+                <a href="tel:+918668062943" className="transition hover:text-brand">+91 86680 62943</a>
+              </li>
+              <li className="flex gap-3">
+                <Mail className="h-4 w-4 shrink-0 text-brand mt-0.5" />
+                <a href="mailto:eversmiledc@gmail.com" className="transition hover:text-brand">eversmiledc@gmail.com</a>
+              </li>
+              <li className="flex gap-3">
+                <Clock className="h-4 w-4 shrink-0 text-brand mt-0.5" />
+                <span>Mon–Sat · 9:00 – 20:00</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -68,7 +82,7 @@ export function Footer() {
           <p>© {new Date().getFullYear()} Ever Smile Implant Centre. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-brand">Privacy Policy</a>
-            <a href="#" className="hover:text-brand">Terms & Conditions</a>
+            <a href="#" className="hover:text-brand">Terms &amp; Conditions</a>
           </div>
         </div>
       </div>

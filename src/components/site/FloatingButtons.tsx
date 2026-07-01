@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Phone, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
@@ -10,9 +11,22 @@ function WhatsAppIcon({ className }: { className?: string }) {
 }
 
 export function FloatingButtons() {
+  const [showBookBtn, setShowBookBtn] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setShowBookBtn(window.scrollY > 300);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
-      <div className="fixed bottom-6 left-1/2 z-40 -translate-x-1/2">
+      {/* centered book appointment — only visible after scroll */}
+      <div
+        className={`fixed bottom-6 left-1/2 z-40 -translate-x-1/2 transition-all duration-300 ${
+          showBookBtn ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-4 pointer-events-none"
+        }`}
+      >
         <Link
           to="/contact"
           className="btn-primary inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold shadow-lift transition hover:scale-105 whitespace-nowrap"

@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/site/Reveal";
 import { PageHero } from "@/components/site/PageHero";
-import { Phone, Mail, Clock, MessageCircle, Send, MapPin } from "lucide-react";
+import { Phone, Mail, Clock, MessageCircle, Send, MapPin, CalendarDays } from "lucide-react";
 import { useState } from "react";
 
 export const Route = createFileRoute("/contact")({
@@ -74,14 +74,26 @@ function Contact() {
               <Field label="Full Name" name="name" placeholder="Your Name" />
               <Field label="Phone" name="phone" placeholder="+91 …" />
               <Field label="Your Email" name="email" type="email" placeholder="you@email.com" className="sm:col-span-2" />
-              <Field label="Preferred Date" name="preferred_date" placeholder="" type="date" required={false} />
-              <Field label="Preferred Time" name="preferred_time" placeholder="" type="time" required={false} />
+              <div>
+                <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Preferred Date</label>
+                <div className="relative mt-2">
+                  <CalendarDays className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground pointer-events-none" />
+                  <input name="preferred_date" type="date" min={new Date().toISOString().split("T")[0]} className="w-full rounded-xl border border-border bg-white pl-10 pr-4 py-3 text-sm text-foreground outline-none transition focus:border-brand focus:ring-1 focus:ring-brand min-h-[46px]" />
+                </div>
+              </div>
+              <div>
+                <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Preferred Time</label>
+                <div className="relative mt-2">
+                  <Clock className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground pointer-events-none" />
+                  <input name="preferred_time" type="time" className="w-full rounded-xl border border-border bg-white pl-10 pr-4 py-3 text-sm text-foreground outline-none transition focus:border-brand focus:ring-1 focus:ring-brand min-h-[46px]" />
+                </div>
+              </div>
               <div className="sm:col-span-2">
                 <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Message</label>
                 <textarea name="message" rows={4} placeholder="Tell us a little about what you're looking for…" className="mt-2 w-full rounded-xl border border-border bg-white px-4 py-3 text-sm outline-none focus:border-brand" />
               </div>
               <button disabled={status === "sending"} className="btn-primary sm:col-span-2 inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold disabled:opacity-60">
-                <Send className="h-4 w-4" /> {status === "sending" ? "Sending..." : "Request Appointment"}
+                <Send className="h-4 w-4" /> {status === "sending" ? "Sending..." : "Make an Appointment"}
               </button>
               {status === "success" && (
                 <p className="sm:col-span-2 text-sm font-medium text-green-600">Thank you! We've received your request and will be in touch shortly.</p>
@@ -96,17 +108,23 @@ function Contact() {
           <Reveal direction="right" delay={120}>
             <div className="space-y-4">
             {[
-              { icon: MapPin, title: "Visit", text: "No.14D, Basin Road, Thiruvottiyur, Chennai - 600019" },
-              { icon: Phone, title: "Call", text: "+91 86680 62943" },
-              { icon: MessageCircle, title: "WhatsApp", text: "+91 86680 62943" },
-              { icon: Mail, title: "Email", text: "eversmiledc@gmail.com" },
+              { icon: MapPin, title: "Visit", text: "No.14D, Basin Road, Thiruvottiyur, Chennai - 600019", href: "https://www.google.com/maps?q=No.14D,Basin+Road,Thiruvottiyur,Chennai+600019" },
+              { icon: Phone, title: "Call", text: "+91 86680 62943", href: "tel:+918668062943" },
+              { icon: MessageCircle, title: "WhatsApp", text: "+91 86680 62943", href: "https://wa.me/918668062943" },
+              { icon: Mail, title: "Email", text: "eversmiledc@gmail.com", href: "mailto:eversmiledc@gmail.com" },
               { icon: Clock, title: "Hours", text: "Mon–Sat · 9:00 AM – 8:00 PM · 24/7 Emergency" },
             ].map((i) => (
               <div key={i.title} className="flex gap-4 rounded-2xl border border-border bg-white p-5">
                 <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-soft text-brand"><i.icon className="h-5 w-5" /></div>
                 <div>
                   <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{i.title}</div>
-                  <div className="mt-1 text-sm text-foreground">{i.text}</div>
+                  {i.href ? (
+                    <a href={i.href} target={i.href.startsWith("http") ? "_blank" : undefined} rel={i.href.startsWith("http") ? "noopener noreferrer" : undefined} className="mt-1 block text-sm text-foreground hover:text-brand transition">
+                      {i.text}
+                    </a>
+                  ) : (
+                    <div className="mt-1 text-sm text-foreground">{i.text}</div>
+                  )}
                 </div>
               </div>
             ))}

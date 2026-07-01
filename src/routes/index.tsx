@@ -121,13 +121,7 @@ function AppointmentForm() {
           <input name="preferred_time" type="time" className="w-full rounded-xl border border-border bg-white pl-10 pr-4 py-3 text-sm text-foreground outline-none transition focus:border-brand focus:ring-1 focus:ring-brand min-h-[46px]" />
         </div>
       </div>
-      <div className="sm:col-span-2">
-        <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Treatment of Interest</label>
-        <select name="treatment" className="mt-2 w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-foreground outline-none transition focus:border-brand focus:ring-1 focus:ring-brand">
-          <option value="" className="text-foreground">Select a service…</option>
-          {services.map(s => <option key={s.title} value={s.title} className="text-foreground">{s.title}</option>)}
-        </select>
-      </div>
+
       <div className="sm:col-span-2">
         <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Message (optional)</label>
         <textarea name="message" rows={3} placeholder="Tell us a bit about your concern…" className="mt-2 w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-foreground outline-none transition focus:border-brand focus:ring-1 focus:ring-brand resize-none" />
@@ -346,14 +340,14 @@ function Index() {
                 <div className="mt-8 space-y-4">
                   {[
                     { icon: Clock,       text: "Mon – Sat · 9 AM – 8 PM" },
-                    { icon: Phone,       text: "+91 86680 62943" },
+                    { icon: Phone,       text: "+91 86680 62943", href: "tel:+918668062943" },
                     { icon: CheckCircle2, text: "24 / 7 Emergency Available" },
-                  ].map(({ icon: Icon, text }) => (
+                  ].map(({ icon: Icon, text, href }) => (
                     <div key={text} className="flex items-center gap-3 text-foreground/80 text-sm font-medium">
                       <span className="grid h-9 w-9 place-items-center rounded-xl bg-brand-soft text-brand">
                         <Icon className="h-4 w-4" />
                       </span>
-                      {text}
+                      {href ? <a href={href} className="hover:text-brand transition">{text}</a> : text}
                     </div>
                   ))}
                 </div>
