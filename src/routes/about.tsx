@@ -27,7 +27,7 @@ const pillars = [
 
 const highlights = [
   { icon: Users, title: "Expert Team", desc: "Board-certified specialists across every dental discipline." },
-  { icon: Microscope, title: "Modern Infrastructure", desc: "Two operatories, dedicated surgical suite and in-house lab." },
+  { icon: Microscope, title: "Modern Infrastructure", desc: "Two operatories, dedicated surgical suite." },
   { icon: Sparkles, title: "Advanced Technology", desc: "Digital scanners." },
   { icon: HeartHandshake, title: "Patient-Centered", desc: "Sedation options, transparent pricing, lifetime aftercare." },
 ];
