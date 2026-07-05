@@ -1,11 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
-import heroImg from "@/assets/hero-clinic.jpg";
-import clinicInterior from "@/assets/clinic-interior.jpg";
 import specCosmetic from "@/assets/spec-cosmetic.jpg";
 import specImplants from "@/assets/spec-implants.jpg";
 import specMaxfac from "@/assets/spec-maxfac.jpg";
 import specOrtho from "@/assets/spec-ortho.jpg";
+import galleryNew1 from "@/assets/gallery-new-1.jpeg";
+import galleryNew4 from "@/assets/gallery-new-4.jpeg";
 import doctor1 from "@/assets/doctor-1.jpg";
 import doctor2 from "@/assets/doctor-2.jpg";
 import smile from "@/assets/smile-1.jpg";
@@ -144,7 +144,7 @@ function AppointmentForm() {
 
 function Index() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const heroSlides = [heroImg, clinicInterior, specCosmetic, specImplants, specMaxfac, specOrtho];
+  const heroSlides = [galleryNew1, galleryNew4, specCosmetic, specImplants, specMaxfac, specOrtho];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -205,7 +205,6 @@ function Index() {
                   />
                 ))}
               </div>
-
             </div>
           </Reveal>
         </div>
@@ -338,7 +337,6 @@ function Index() {
                   {[
                     { icon: Clock, text: "Mon – Sat · 9 AM – 9 PM \n Sun · 9 AM – 1.30 PM" },
                     { icon: Phone, text: "+91 86680 62943", href: "tel:+918668062943" },
-                    { icon: CheckCircle2, text: "24 / 7 Emergency Available" },
                   ].map(({ icon: Icon, text, href }) => (
                     <div key={text} className="flex items-center gap-3 text-foreground/80 text-sm font-medium">
                       <span className="grid h-9 w-9 place-items-center rounded-xl bg-brand-soft text-brand">
@@ -404,29 +402,6 @@ function Index() {
             </div>
           </Reveal>
         </div>
-      </section>
-
-      {/* EMERGENCY CTA */}
-      <section className="bg-gradient-to-br from-brand to-brand-deep py-20 text-white">
-        <Reveal>
-          <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-6 text-center md:flex-row md:text-left">
-            <div>
-              <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs uppercase tracking-widest">
-                <Clock className="h-3.5 w-3.5" /> 24/7 Available Emergency
-              </span>
-              <h2 className="mt-4 font-display text-4xl sm:text-5xl text-white">Dental emergency? We're here for you.</h2>
-              <p className="mt-3 max-w-xl text-white/80">Fast-track appointments for accidents, severe pain and trauma cases — any time, day or night.</p>
-            </div>
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <a href="tel:+918668062943" className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-brand-deep transition hover:scale-105">
-                <Phone className="h-4 w-4" /> Call Emergency Line
-              </a>
-              <a href="#book-appointment" className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-brand-deep transition hover:scale-105">
-                <ArrowRight className="h-4 w-4" /> Book Appointment
-              </a>
-            </div>
-          </div>
-        </Reveal>
       </section>
     </>
   );

@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
-import clinic from "@/assets/clinic-interior.jpg";
+import galleryNew1 from "@/assets/gallery-new-1.jpeg";
 import { Target, Eye, HeartHandshake, Microscope, Users, Sparkles, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
@@ -44,7 +44,7 @@ function About() {
         <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:items-center">
           <Reveal direction="left">
             <div className="overflow-hidden rounded-[2rem] shadow-lift">
-              <img src={clinic} alt="Clinic interior" loading="lazy" width={1400} height={900} className="h-[500px] w-full object-cover" />
+              <img src={galleryNew1} alt="Clinic interior" loading="lazy" width={1400} height={900} className="h-[500px] w-full object-cover" />
             </div>
           </Reveal>
           <Reveal direction="right" delay={120}>
