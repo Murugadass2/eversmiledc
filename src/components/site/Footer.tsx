@@ -3,7 +3,7 @@ import { Facebook, Instagram, Linkedin, Phone, Mail, Clock, Youtube, MapPin } fr
 
 const socials = [
   { Icon: Facebook, href: "#", label: "Facebook", color: "#1877F2" },
-  { Icon: Instagram, href: "#", label: "Instagram", color: "#E1306C" },
+  { Icon: Instagram, href: "https://www.instagram.com/eversmile_dc?igsh=MXJweDNramxpM3FwcA==", label: "Instagram", color: "#E1306C" },
   { Icon: Linkedin, href: "#", label: "LinkedIn", color: "#0A66C2" },
   { Icon: Youtube, href: "#", label: "YouTube", color: "#FF0000" },
 ];
