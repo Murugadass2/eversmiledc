@@ -89,6 +89,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "geo.region", content: "IN-TN" },
+      { name: "geo.placename", content: "Chennai" },
+      { name: "geo.position", content: "13.1610;80.3005" },
+      { name: "ICBM", content: "13.1610, 80.3005" },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
     ],
     links: [
       {
@@ -99,6 +104,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" },
       { rel: "icon", type: "image/png", href: logoHref },
+      { rel: "shortcut icon", type: "image/png", href: logoHref },
       { rel: "apple-touch-icon", href: logoHref },
     ],
   }),
@@ -109,10 +115,50 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  const schemaOrg = {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "EverSmile Implant Centre",
+    "image": "https://www.eversmile.co.in/eversmile-icon.png",
+    "url": "https://www.eversmile.co.in/",
+    "telephone": "+918668062943",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "No.14D, Basin Road, Thiruvottiyur",
+      "addressLocality": "Chennai",
+      "postalCode": "600019",
+      "addressRegion": "TN",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 13.1610,
+      "longitude": 80.3005
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "09:00",
+        "closes": "13:30"
+      }
+    ]
+  };
+
   return (
     <html lang="en">
       <head>
         <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
+        />
       </head>
       <body>
         {children}
