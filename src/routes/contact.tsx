@@ -111,8 +111,8 @@ function Contact() {
               { icon: MapPin, title: "Visit", text: "No.14D, Basin Road, Thiruvottiyur, Chennai - 600019", href: "https://www.google.com/maps?q=No.14D,Basin+Road,Thiruvottiyur,Chennai+600019" },
               { icon: Phone, title: "Call", text: "+91 86680 62943", href: "tel:+918668062943" },
               { icon: MessageCircle, title: "WhatsApp", text: "+91 86680 62943", href: "https://wa.me/918668062943" },
-              { icon: Mail, title: "Email", text: "eversmiledc15@gmail.com", href: "mailto:eversmiledc15@gmail.com" },
-              { icon: Clock, title: "Hours", text: "Mon–Sat · 9:00 AM – 9:00 PM Sun· 9:00 AM-1:30 PM · 24/7 Emergency" },
+              { icon: Mail, title: "Email", text: "eversmiledc01@gmail.com", href: "mailto:eversmiledc15@gmail.com" },
+              { icon: Clock, title: "Hours", text: "Mon–Sat · 9:00 AM – 9:00 PM Sun· 9:00 AM-1:30 PM" },
             ].map((i) => (
               <div key={i.title} className="flex gap-4 rounded-2xl border border-border bg-white p-5">
                 <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-soft text-brand"><i.icon className="h-5 w-5" /></div>
