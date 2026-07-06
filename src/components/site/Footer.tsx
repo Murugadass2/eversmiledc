@@ -68,7 +68,7 @@ export function Footer() {
               </li>
               <li className="flex gap-3">
                 <Mail className="h-4 w-4 shrink-0 text-brand mt-0.5" />
-                <a href="mailto:eversmiledc15@gmail.com" className="transition hover:text-brand">eversmiledc15@gmail.com</a>
+                <a href="mailto:eversmiledc01@gmail.com" className="transition hover:text-brand">eversmiledc01@gmail.com</a>
               </li>
               <li className="flex gap-3">
                 <Clock className="h-4 w-4 shrink-0 text-brand mt-0.5" />
