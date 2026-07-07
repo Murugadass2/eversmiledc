@@ -55,7 +55,7 @@ const whyUs = [
 const doctors = [
   {
     img: doctor1,
-    name: "Dr. M. Wasimharoon",
+    name: "Dr.Wasimharoon M",
     role: (
       <>
         Oral & Maxillofacial Surgeon
@@ -70,8 +70,8 @@ const doctors = [
   },
   {
     img: doctor2,
-    name: "Dr. H. Fahmeedha Ishrath",
-    role: "Public Health Dentist",
+    name: "Dr.Fahmeedha Ishrath H",
+    role: "Preventive and Public Health Dentist",
     exp: "BDS, MDS",
     bio: "Dedicated to delivering evidence-based and patient-centered dental care. Believes that prevention and patient education are the foundations of lifelong oral health — helping individuals achieve healthy, confident smiles.",
     phone: "9003441916",
